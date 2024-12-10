@@ -1,0 +1,13 @@
+//import de variables y mixin//
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* CATALOGO MOBILE */
+main {
+    .col-productos{
+        .card{
+            margin-bottom: 15px;
+        }
+    }
+}
+/* FIN DE CATALOGO MOBILE */

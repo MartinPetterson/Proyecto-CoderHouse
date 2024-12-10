@@ -1,0 +1,118 @@
+//import de variables y mixin//
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* Inicio de header*/
+header{
+    background-color: $text-secondary;
+    color: whitesmoke;
+    .navbar{
+        button{
+            backface-visibility: visible;
+            background-color: $bg-secondary;
+        }
+        .container-fluid{
+            display: inline-block;
+        }
+        .cuenta{
+        a{
+            img{
+                max-width: 25px;
+                 margin-left: 20px;
+                }
+        }
+        }
+    }
+}
+.nav-item {
+    .nav-link{
+        color: $text-color;
+        transition: color 0.25s; 
+    }
+}
+
+.carousel{
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Inicio de Home*/
+
+main{
+    background-color: $bg-color;
+    padding: 2%;
+    padding-right: 1em;
+    img{
+        flex-direction: row;
+        max-width: 40%;
+    }
+    h2{
+        color: $text-color;
+        text-align: center; 
+        padding: 1rem;
+    }
+    h5{
+        text-align: center;
+    font-weight: 200;
+    padding-bottom: 20%;
+    }
+    p{
+        text-align: center;
+        font-weight: 600;
+        color: $text-secondary;
+        background-color: #d2e4e1;
+        display: inline inline-block;
+        border-radius: 5rem;
+    }
+    .card-body{
+        background-color: $text-secondary;
+        color: $text-color;
+        display: block;
+    }
+    .row{
+        .card{
+            flex-direction: row;
+        }
+        .col-novedades{
+            @include mobile-grid;
+        }
+        .col-descuento{
+            @include mobile-grid;
+        }
+        .col-descuentos{
+            @include mobile-grid;
+        }
+    }
+}
+/*Fin de Home*/
+
+/*Inicio de footer*/
+footer{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding-top: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #69c2f0;
+    p{
+     margin-bottom: 0;
+        a{
+            text-decoration: none;
+            list-style: none;
+            color: #202324;
+            font-weight: bold;
+        }
+    }
+    img{
+        max-width: 45px;
+    }
+    .rrss{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+/* Fin de footer */
+

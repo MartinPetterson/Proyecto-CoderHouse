@@ -1,3 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-right: 0;
+}
 
+body {
+  background-color: var(#3f3f3f);
+}
+
+.noticias {
+  text-align: center;
+  background: #F7C325;
+  color: #202324;
+  font-weight: 600;
+}
+
+/* Inicio de header*/
+header {
+  background-color: #202324;
+  color: whitesmoke;
+}
+header .navbar button {
+  backface-visibility: visible;
+  background-color: #69c2f0;
+}
+header .navbar .container-fluid {
+  display: inline-block;
+}
+header .navbar .cuenta a img {
+  max-width: 25px;
+  margin-left: 20px;
+}
+
+.nav-item .nav-link {
+  color: whitesmoke;
+  transition: color 0.25s;
+}
+
+.carousel img {
+  display: block;
+  width: 100%;
+}
+
+/* Inicio de Home*/
+main {
+  background-color: #3f3f3f;
+  padding: 2%;
+  padding-right: 1em;
+}
+main img {
+  flex-direction: row;
+  max-width: 40%;
+}
+main h2 {
+  color: whitesmoke;
+  text-align: center;
+  padding: 1rem;
+}
+main h5 {
+  text-align: center;
+  font-weight: 200;
+  padding-bottom: 20%;
+}
+main p {
+  text-align: center;
+  font-weight: 600;
+  color: #202324;
+  background-color: #d2e4e1;
+  display: inline inline-block;
+  border-radius: 5rem;
+}
+main .card-body {
+  background-color: #202324;
+  color: whitesmoke;
+  display: block;
+}
+main .row .card {
+  flex-direction: row;
+}
+main .row .col-novedades {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+}
+main .row .col-descuento {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+}
+main .row .col-descuentos {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+}
+
+/*Fin de Home*/
+/*Inicio de footer*/
+footer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-top: 5px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #69c2f0;
+}
+footer p {
+  margin-bottom: 0;
+}
+footer p a {
+  text-decoration: none;
+  list-style: none;
+  color: #202324;
+  font-weight: bold;
+}
+footer img {
+  max-width: 45px;
+}
+footer .rrss {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Fin de footer */
+/* ESTILOS DE TABLET */
+@media screen and (min-width: 600px) {
+  header .navbar .container-fluid {
+    display: flex;
+  }
+  header .navbar button {
+    margin-left: 3%;
+  }
+  header .navbar-nav {
+    flex-direction: row;
+    gap: 5em;
+    text-align: center;
+    justify-content: center;
+  }
+  header nav .cuenta a img {
+    max-width: 50px;
+    max-width: 50px;
+    margin-left: 20px;
+  }
+  /* Fin de header*/
+  /* Inicio de Home */
+  main .row .col-novedades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+  }
+  main .row .col-descuento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+  }
+  main .row .col-descuentos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #navbarNav {
+    display: flex;
+    justify-content: center;
+  }
+  header nav button {
+    display: none;
+  }
+  /* Inicio de Carrusel */
+  .carousel {
+    padding-top: 20px;
+    background-color: #3f3f3f;
+    display: flex;
+    justify-content: center;
+  }
+  .carousel #carouselExampleIndicators .carousel-inner img {
+    object-fit: fill;
+    border-radius: 40px;
+  }
+  .carousel img {
+    width: initial;
+  }
+  /* Fin de carrusel */
+  /* Inicio de Home */
+  main .card-body {
+    width: 100%;
+  }
+  main h5 {
+    padding-bottom: 2%;
+  }
+  main .row .card {
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+  }
+  main .row .card img {
+    margin: 13px;
+  }
+  main .row .col-novedades {
+    justify-content: center;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(1, 170px);
+    gap: 7.5em;
+    padding-bottom: 3em;
+  }
+  main .row .col-descuento {
+    justify-content: center;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(1, 170px);
+    gap: 7.5em;
+    padding-bottom: 3em;
+  }
+  /* Fin de Home */
+}
+/* FIN DE DESKTOP */
+/* CATALOGO PARA DISPOSITIVOS TABLETS */
+@media screen and (min-width: 600px) {
+  main .row .col-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    grid-template-rows: repeat(1, 175px);
+    gap: 2em;
+  }
+}
+/* FIN DE CATALOGO PARA DISPOSITIVOS TABLETS */
+/*  CATALOGO DE EQUIPOS DE ESCRITORIO */
+@media screen and (min-width: 1024px) {
+  main .row .col-productos {
+    justify-content: center;
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, 120px);
+    gap: 7.5em;
+    padding-bottom: 7.5em;
+  }
+  main .row .col-descuentos {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 200px);
+    grid-template-rows: repeat(1, 120px);
+    gap: 6em;
+    padding-bottom: 100px;
+  }
+}
+/* CATALOGO MOBILE */
+main .col-productos .card {
+  margin-bottom: 15px;
+}
+
+/* FIN DE CATALOGO MOBILE */
 
 /*# sourceMappingURL=styles.css.map */

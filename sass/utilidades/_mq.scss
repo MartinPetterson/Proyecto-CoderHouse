@@ -1,0 +1,155 @@
+// Import de variables y mixin //
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/* ESTILOS DE TABLET */
+@media screen and (min-width:600px){
+    header{
+        .navbar{
+            .container-fluid{
+                display: flex;
+            }
+            button{
+                margin-left: 3%;
+            }
+        }
+        .navbar-nav{
+            flex-direction: row;
+            gap: 5em;
+            text-align: center;
+            justify-content: center;
+        }
+        nav{
+            .cuenta{
+                a{
+                    img{
+                        max-width: 50px;
+                        max-width: 50px;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+/* Fin de header*/
+
+/* Inicio de Home */
+main{
+    .row{
+        .col-novedades{
+            @include tablet-grid;
+        }
+        .col-descuento{
+            @include tablet-grid;
+        }
+        .col-descuentos{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 1em;
+        }
+    }
+}
+}
+// FIN DE TABLETS //
+
+// EQUIPO DE ESCRITORIO //
+
+@media screen and (min-width:1024px){
+    #navbarNav{
+        display: flex;
+        justify-content: center;
+    }
+    header{
+        nav{
+            button{
+                display: none;
+            }
+        }
+    }
+
+    /* Inicio de Carrusel */
+    .carousel{
+        padding-top: 20px;
+        background-color: $bg-color;
+        display: flex;
+        justify-content: center;
+        #carouselExampleIndicators{
+            .carousel-inner{
+                img{
+                    object-fit: fill;
+                    border-radius: 40px;
+                }
+            }
+        }
+        img{
+            width: initial;
+        }
+    }
+    /* Fin de carrusel */
+
+    /* Inicio de Home */
+    main{
+        .card-body{
+            width: 100%;
+        }
+        h5{
+            padding-bottom: 2%;
+        }
+        .row{
+            .card{
+                flex-direction: column;
+                align-items: center;
+                width: 250px;
+                img{
+                    margin: 13px;
+                }
+            }
+            .col-novedades{
+                @include desktop-grid;
+            }
+            .col-descuento{
+                @include desktop-grid;
+            }
+        }
+    }
+    /* Fin de Home */
+}
+    /* FIN DE DESKTOP */
+
+    /* CATALOGO PARA DISPOSITIVOS TABLETS */
+    @media screen and (min-width:600px){
+        main .row .col-productos{
+            display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    grid-template-rows: repeat(1, 175px);
+    gap: 2em;
+        }
+    }
+    /* FIN DE CATALOGO PARA DISPOSITIVOS TABLETS */
+
+    /*  CATALOGO DE EQUIPOS DE ESCRITORIO */
+    @media screen and (min-width:1024px){
+    main{
+        .row{
+            .col-productos{
+                justify-content: center;
+                grid-template-columns: repeat(4, 200px);
+                grid-template-rows: repeat(2, 120px);
+                gap: 7.5em;
+                padding-bottom: 7.5em;
+            }
+            .col-descuentos{
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(6, 200px);
+                grid-template-rows: repeat(1, 120px);
+                gap: 6em;
+                padding-bottom: 100px;
+            }
+        }
+    }
+}
+
