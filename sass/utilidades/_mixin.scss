@@ -15,7 +15,13 @@
 @mixin desktop-grid{
     justify-content: center;
     grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(1, 170px);
+    grid-template-rows: repeat(1, 200px);
     gap: 7.5em;
-    padding-bottom: 3em;
 }
+
+// @mixin desktop-grid-catalogo{
+//     justify-content: center;
+//     grid-template-columns: repeat(4, 200px);
+//     grid-template-rows: repeat(1, 200px);
+//     gap: 7.5em;
+// }

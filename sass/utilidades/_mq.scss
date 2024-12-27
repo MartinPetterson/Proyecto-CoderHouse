@@ -46,9 +46,15 @@ main{
         }
         .col-descuentos{
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             gap: 1em;
+        }
+        .card{
+            img{
+                width: auto;
+                height: auto;
+            }
         }
     }
 }
@@ -94,25 +100,43 @@ main{
     main{
         .card-body{
             width: 100%;
+            height: 150px;
+            
         }
-        h5{
-            padding-bottom: 2%;
+        h2{
+            padding-bottom: 25%;
+            max-height: 78px;
+            text-overflow: initial;
+            white-space: initial;
         }
         .row{
             .card{
                 flex-direction: column;
                 align-items: center;
                 width: 250px;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
                 img{
                     margin: 13px;
                 }
             }
+            .card:hover{ 
+                border-color: $bg-secondary;
+                border-width: 4px
+            }
             .col-novedades{
-                @include desktop-grid;
+                justify-content: center;
+                grid-template-columns: repeat(4, 200px);
+                grid-template-rows: repeat(1, 280px);
+                gap: 7.5em;
             }
             .col-descuento{
                 @include desktop-grid;
             }
+        }
+        p{
+            margin-top: 1em;
         }
     }
     /* Fin de Home */
@@ -121,11 +145,18 @@ main{
 
     /* CATALOGO PARA DISPOSITIVOS TABLETS */
     @media screen and (min-width:600px){
-        main .row .col-productos{
-            display: grid;
-    grid-template-columns: repeat(2, 3fr);
-    grid-template-rows: repeat(1, 175px);
-    gap: 2em;
+        main {
+            h2{
+                font-size: larger;
+            }
+            .row{
+                .col-productos{
+                    display: grid;
+                    grid-template-columns: repeat(2, 3fr);
+                    grid-template-rows: repeat(1, 175px);
+                    gap: 2em;
+                }
+            } 
         }
     }
     /* FIN DE CATALOGO PARA DISPOSITIVOS TABLETS */
@@ -135,11 +166,12 @@ main{
     main{
         .row{
             .col-productos{
-                justify-content: center;
-                grid-template-columns: repeat(4, 200px);
-                grid-template-rows: repeat(2, 120px);
-                gap: 7.5em;
-                padding-bottom: 7.5em;
+                // justify-content: center;
+                // grid-template-columns: repeat(4, 200px);
+                // grid-template-rows: repeat(2, 170px);
+                // gap: 7.5em;
+                // padding-bottom: 17em;
+                @include desktop-grid;
             }
             .col-descuentos{
                 display: grid;
@@ -147,7 +179,7 @@ main{
                 grid-template-columns: repeat(6, 200px);
                 grid-template-rows: repeat(1, 120px);
                 gap: 6em;
-                padding-bottom: 100px;
+                padding-bottom: 14em;
             }
         }
     }

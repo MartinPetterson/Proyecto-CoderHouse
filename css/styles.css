@@ -16,6 +16,10 @@ body {
   font-weight: 600;
 }
 
+h1 {
+  font-family: "Source Sans 3", serif;
+}
+
 /* Inicio de header*/
 header {
   background-color: #202324;
@@ -37,6 +41,9 @@ header .navbar .cuenta a img {
   color: whitesmoke;
   transition: color 0.25s;
 }
+.nav-item .nav-link:hover {
+  color: #69c2f0;
+}
 
 .carousel img {
   display: block;
@@ -53,15 +60,21 @@ main img {
   flex-direction: row;
   max-width: 40%;
 }
-main h2 {
+main h1 {
   color: whitesmoke;
   text-align: center;
   padding: 1rem;
+  font-size: 300;
 }
-main h5 {
+main h2 {
+  height: 75px;
   text-align: center;
-  font-weight: 200;
+  font-size: medium;
+  font-weight: 100;
   padding-bottom: 20%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 main p {
   text-align: center;
@@ -70,14 +83,23 @@ main p {
   background-color: #d2e4e1;
   display: inline inline-block;
   border-radius: 5rem;
+  margin-top: 2em;
 }
 main .card-body {
   background-color: #202324;
   color: whitesmoke;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 170px;
+}
+main .card-body .precio {
+  display: grid;
+  grid-template-columns: auto max-content;
 }
 main .row .card {
   flex-direction: row;
+  height: 150px;
 }
 main .row .col-novedades {
   display: grid;
@@ -127,6 +149,12 @@ footer .rrss {
 }
 
 /* Fin de footer */
+/* CATALOGO MOBILE */
+main .col-productos .card {
+  margin-bottom: 15px;
+}
+
+/* FIN DE CATALOGO MOBILE */
 /* ESTILOS DE TABLET */
 @media screen and (min-width: 600px) {
   header .navbar .container-fluid {
@@ -162,9 +190,13 @@ footer .rrss {
   }
   main .row .col-descuentos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1em;
+  }
+  main .row .card img {
+    width: auto;
+    height: auto;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -193,37 +225,52 @@ footer .rrss {
   /* Inicio de Home */
   main .card-body {
     width: 100%;
+    height: 150px;
   }
-  main h5 {
-    padding-bottom: 2%;
+  main h2 {
+    padding-bottom: 25%;
+    max-height: 78px;
+    text-overflow: initial;
+    white-space: initial;
   }
   main .row .card {
     flex-direction: column;
     align-items: center;
     width: 250px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
   }
   main .row .card img {
     margin: 13px;
   }
+  main .row .card:hover {
+    border-color: #69c2f0;
+    border-width: 4px;
+  }
   main .row .col-novedades {
     justify-content: center;
     grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(1, 170px);
+    grid-template-rows: repeat(1, 280px);
     gap: 7.5em;
-    padding-bottom: 3em;
   }
   main .row .col-descuento {
     justify-content: center;
     grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(1, 170px);
+    grid-template-rows: repeat(1, 200px);
     gap: 7.5em;
-    padding-bottom: 3em;
+  }
+  main p {
+    margin-top: 1em;
   }
   /* Fin de Home */
 }
 /* FIN DE DESKTOP */
 /* CATALOGO PARA DISPOSITIVOS TABLETS */
 @media screen and (min-width: 600px) {
+  main h2 {
+    font-size: larger;
+  }
   main .row .col-productos {
     display: grid;
     grid-template-columns: repeat(2, 3fr);
@@ -237,9 +284,8 @@ footer .rrss {
   main .row .col-productos {
     justify-content: center;
     grid-template-columns: repeat(4, 200px);
-    grid-template-rows: repeat(2, 120px);
+    grid-template-rows: repeat(1, 200px);
     gap: 7.5em;
-    padding-bottom: 7.5em;
   }
   main .row .col-descuentos {
     display: grid;
@@ -247,14 +293,8 @@ footer .rrss {
     grid-template-columns: repeat(6, 200px);
     grid-template-rows: repeat(1, 120px);
     gap: 6em;
-    padding-bottom: 100px;
+    padding-bottom: 14em;
   }
 }
-/* CATALOGO MOBILE */
-main .col-productos .card {
-  margin-bottom: 15px;
-}
-
-/* FIN DE CATALOGO MOBILE */
 
 /*# sourceMappingURL=styles.css.map */
